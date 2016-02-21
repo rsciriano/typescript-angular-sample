@@ -11,3 +11,7 @@
 /test/sample
 !/test/sample/bower.json
 /npm-shrinkwrap.json
+
+/typings
+!/typings/browser.d.ts
+!/typings/main.d.ts
