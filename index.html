@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular TypeScript Sample</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.11/css/dataTables.bootstrap.min.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+    <div ng-controller="restaurantsCtrl as vm" >
+        <h1>{{vm.title}}</h1>
+        <p>Mostrando {{vm.restaurants.rows}} de {{vm.restaurants.totalCount}} restaurantes</p>
+        
+        <table class="table table-striped dataTable">
+            <thead>
+                <tr>
+                    <th data-field="id" rob-table-sort="vm.sortCriteria">#</span></th>
+                    <th data-field="title" rob-table-sort="vm.sortCriteria">Nombre</th>
+                    <th data-field="streetAddress" rob-table-sort="vm.sortCriteria">Dirección</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="restaurant in vm.restaurants.result">
+                    <td>{{restaurant.id}}</td>
+                    <td>{{restaurant.title}}</td>
+                    <td>{{restaurant.streetAddress}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/directives/robTableSort.js"></script>
+    <script src="app/restaurants/restaurantsCtrl.js"></script>
+    <script src="app/restaurants/restaurantsService.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "typescript-angular-sample",
+  "version": "1.0.0",
+  "description": "Ejemplo de una aplicación angularjs creada con typescript ",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angularjs",
+    "typescript",
+    "webpack"
+  ],
+  "author": "@rsciriano",
+  "license": "ISC"
+}
