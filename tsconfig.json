@@ -5,6 +5,7 @@
     },
     "filesGlob": [
         "./**/*.ts",
+        "!./bower_components/**/*.*",
         "!./node_modules/**/*.ts",
         "!./typings/**/*.ts",
         "./typings/browser.d.ts"

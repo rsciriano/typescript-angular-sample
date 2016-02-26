@@ -15,3 +15,5 @@
 /typings
 !/typings/browser.d.ts
 !/typings/main.d.ts
+
+/assets

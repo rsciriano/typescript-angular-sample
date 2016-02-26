@@ -1,21 +1,23 @@
-///<reference path="../../bower_components/angular/angular.js" />
-angular.module('app').service('restaurantsService', ['$http', function($http) {
-    var srv = this;
+class RestaurantsService {
     
-    /**
-     * 
-     */
-    srv.getRestaurants = function(options) {
+    //public static $inject = ['$http'];
+    
+    constructor(private $http: angular.IHttpService){
+        
+    }
+        
+    public getRestaurants(options: {sort: string}): angular.IPromise<any> {
         
         var url = 'http://www.zaragoza.es/api/recurso/turismo/restaurante.json?';
         if (options.sort){
             url += 'sort=' + options.sort;
         }
         
-        return $http.get(url).then(function(response){
+        return this.$http.get(url).then(function(response){
             return response.data;
         });
     }
     
-    return srv;
-}]);
+}
+
+angular.module('app').service('restaurantsService', ['$http', RestaurantsService]);
