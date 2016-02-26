@@ -1,4 +1,4 @@
-#Ejemplo de aplicación angularjs con TypeScript
+#Añadiendo tipos a aplicación angularjs
 
 ##Preparando el entorno de desarrollo
 
@@ -8,26 +8,30 @@ Asegurarse de tener instalado git y node
 
 Instalar paquetes de node globalmente
 
-- npm install -g bower
-- npm install -g gulp
-- npm install -g typescript
+    npm install -g bower gulp http-server
 
-##WebPack
-Cargador de css
-Dev-Server
+Instalar paquetes de node locales
 
+    npm install
+    
+Instalar paquetes de Bower
 
-##Gulp
-Instalar globalmente y localmente
-https://github.com/DanWahlin/AngularIn20TypeScript
-http://weblogs.asp.net/dwahlin/creating-a-typescript-workflow-with-gulp
+    bower install
+    
+Arrancar servidor web
 
-##TypeScript
-npm install typings --global
-https://github.com/typings/typings
-https://github.com/Microsoft/TypeScript/wiki/Integrating-with-Build-Tools
+    http-server
+    
+## Añadiendo TypeScript
 
-##Configurando Visual Studio Code
+Instalar paquetes de node globalmente
 
-[HTML](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
- 
+    npm install -g typescript tsc typings
+    
+Instalar Definición de tipos
+
+    typyngs install
+    
+Cambiar extensiones de archivos `js` por `ts` 
+
+Cambiar referencias en `index.html`

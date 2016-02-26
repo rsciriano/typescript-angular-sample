@@ -1,14 +1,14 @@
 angular.module('app').controller("restaurantsCtrl", [
     'restaurantsService', 
     '$scope', 
-    function(restaurantsService: RestaurantsService, $scope) {
+    function(restaurantsService, $scope) {
         var vm = this;
         
         vm.title = 'Listado de restaurantes de Zaragoza';
         vm.sortCriteria = 'id asc';
         
         function loadData() {
-            restaurantsService.getRestaurants({sort: vm.sortCriteria}).then(function(data) {
+            restaurantsService.getRestaurants({sortCriteria: vm.sortCriteria}).then(function(data) {
                 vm.restaurants = data; 
             });
         }
